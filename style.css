@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+  /* background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%); */
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.card {
+  width: 500px;
+  height: 105px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #fff;
+  /* height: 600px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 22px 20px;
+}
+
+.card-search {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card-search > i {
+  font-size: 2.5rem;
+  color: #333;
+  padding-bottom: 6px;
+}
+
+.card-search input {
+  border: none;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  width: 80%;
+  padding: 1rem 0;
+  font-size: 22px;
+  padding-left: 1rem;
+}
+
+.card-search button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease;
+  border: none;
+}
+
+.card-search button i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  opacity: 0;
+  scale: 0;
+  transition: 0.5s;
+  display: none;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-info i {
+  font-size: 2rem;
+  color: #333;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-weight: 600;
+}
+
+.weather-details,
+.weather-box {
+  opacity: 0;
+  scale: 0;
+}
+
+.weather-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.weather-box img {
+  max-width: 300px;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 700;
+}
